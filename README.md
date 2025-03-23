@@ -1,4 +1,4 @@
-# Wallpapers but with readme preview
+# Wallpapers
 
 | Preview | Name |
 |---------|------|
