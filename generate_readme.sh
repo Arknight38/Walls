@@ -15,7 +15,7 @@ for img in wallpapers/*.{png,jpg,jpeg}; do
         fi
 
         echo "<td align=\"center\" width=\"5\">" >> README.md
-        echo "<img src=\"$img\" width=\"200px\"><br>$(basename "$img")" >> README.md
+        echo "<img src=\"$img\" width=\"200px\"><br> >> README.md
         echo "</td>" >> README.md
 
         if (( count % 3 == 2 )); then
