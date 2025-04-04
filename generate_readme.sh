@@ -3,16 +3,17 @@
 echo "Generating README.md..."
 echo "# Wallpapers" > README.md
 echo "" >> README.md
-echo "<table>" >> README.md
-echo "<tr><th>Preview</th><th>Name</th></tr>" >> README.md
-shopt -s nullglob
 
+# Add a div container for styling
+echo "<div style=\"display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;\">" >> README.md
+
+shopt -s nullglob
 for img in wallpapers/*.{png,jpg,jpeg}; do
     if [[ -f "$img" ]]; then
-        echo "<tr><td><img src=\"$img\" width=\"200px\"></td><td>$(basename "$img")</td></tr>" >> README.md
+        echo "<div style=\"text-align: center;\"><img src=\"$img\" width=\"300px\"><br>$(basename "$img")</div>" >> README.md
     fi
 done
 
-echo "</table>" >> README.md
+echo "</div>" >> README.md
 
 echo "README.md updated!"
