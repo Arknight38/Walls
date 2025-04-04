@@ -14,7 +14,7 @@ for img in wallpapers/*.{png,jpg,jpeg}; do
             echo "<tr>" >> README.md
         fi
 
-        echo "<td align=\"center\" width=\"22%\">" >> README.md
+        echo "<td align=\"center\" width=\"5\">" >> README.md
         echo "<img src=\"$img\" width=\"200px\"><br>$(basename "$img")" >> README.md
         echo "</td>" >> README.md
 
