@@ -149,7 +149,7 @@
 <img src="wallpapers/a_colorful_square_with_black_text_02.png" width="300px"><br>
 </td>
 <td align="center" width="300px">
-<img src="wallpapers/a_girl_holding_a_hammer_to_a_man's_head.png" width="300px"><br>
+<img src="wallpapers/a_girl_holding_a_hammer_to_a_mans_head.png" width="300px"><br>
 </td>
 <td align="center" width="300px">
 <img src="wallpapers/a_group_of_space_ships_in_the_sky.png" width="300px"><br>
