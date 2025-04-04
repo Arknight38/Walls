@@ -3,16 +3,32 @@
 echo "Generating README.md..."
 echo "# Wallpapers" > README.md
 echo "" >> README.md
-
-# Add a grid layout with 3 columns
-echo "<div style=\"display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; text-align: center;\">" >> README.md
+echo "<table>" >> README.md
 
 shopt -s nullglob
+count=0
+
 for img in wallpapers/*.{png,jpg,jpeg}; do
     if [[ -f "$img" ]]; then
-        echo "<div><img src=\"$img\" width=\"300px\"><br>$(basename "$img")</div>" >> README.md
+        if (( count % 3 == 0 )); then
+            echo "<tr>" >> README.md
+        fi
+
+        echo "<td align=\"center\" width=\"33%\">" >> README.md
+        echo "<img src=\"$img\" width=\"300px\"><br>$(basename "$img")" >> README.md
+        echo "</td>" >> README.md
+
+        if (( count % 3 == 2 )); then
+            echo "</tr>" >> README.md
+        fi
+
+        ((count++))
     fi
 done
 
-echo "</div>" >> README.md
+if (( count % 3 != 0 )); then
+    echo "</tr>" >> README.md
+fi
+
+echo "</table>" >> README.md
 echo "README.md updated!"
