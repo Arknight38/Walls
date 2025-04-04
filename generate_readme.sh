@@ -9,7 +9,7 @@ shopt -s nullglob
 
 for img in wallpapers/*.{png,jpg,jpeg}; do
     if [[ -f "$img" ]]; then
-        echo "| <img src=\"$img\" width=\"200px\"> | $(basename "$img") |" >> README.md
+        echo "| <img src=\"$img\" width=\"800px\"> | $(basename "$img") |" >> README.md
     fi
 done
 
