@@ -14,18 +14,19 @@ for img in wallpapers/*.{png,jpg,jpeg}; do
             echo "<tr>" >> README.md
         fi
 
-        echo "<td align=\"center\" width=\"5\">" >> README.md
+        echo "<td align=\"center\" width=\"200px\">" >> README.md
         echo "<img src=\"$img\" width=\"200px\"><br>" >> README.md
         echo "</td>" >> README.md
 
-        if (( count % 3 == 2 )); then
+        ((count++))
+
+        if (( count % 3 == 0 )); then
             echo "</tr>" >> README.md
         fi
-
-        ((count++))
     fi
 done
 
+# Close unclosed row
 if (( count % 3 != 0 )); then
     echo "</tr>" >> README.md
 fi
